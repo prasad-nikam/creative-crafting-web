@@ -2,6 +2,7 @@ import {
 	ArrowDownRight,
 	ArrowUpRight,
 	BarChart3,
+	Clapperboard,
 	Layers3,
 	Play,
 	Target,
@@ -19,6 +20,28 @@ const metrics = [
 	{ value: "50M+", label: "Audience net reach", icon: BarChart3 },
 ];
 
+const capabilities = [
+	{
+		title: "Strategy",
+		description: "Understand the goal before choosing the approach.",
+		icon: Target,
+	},
+	{
+		title: "Creative",
+		description: "Shape ideas into clear, compelling communication.",
+		icon: Clapperboard,
+	},
+	{
+		title: "Technology",
+		description: "Use digital tools to turn plans into experiences.",
+		icon: Layers3,
+	},
+	{
+		title: "Execution",
+		description: "Coordinate the details from concept to delivery.",
+		icon: Users,
+	},
+];
 export function HeroSection() {
 	return (
 		<section
@@ -110,33 +133,33 @@ export function HeroSection() {
 				</Reveal>
 			</Container>
 			<Container className="relative z-10 border-t border-white/20 py-4 sm:py-5">
-				<div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-0">
+				<div className="grid grid-cols-2 gap-4 sm:grid-cols-5 sm:gap-0">
 					<div className="flex items-center sm:pr-4">
-						<p className="font-display text-lg font-semibold uppercase leading-none sm:text-xl">
-							Built for ideas
+						<p className="font-display text-lg font-semibold uppercase leading-tight sm:text-xl">
+							From first brief
 							<br />
-							that need to move.
+							to final delivery.
 						</p>
 					</div>
-					{metrics.map(({ value, label, icon: Icon }) => (
+
+					{capabilities.map(({ title, description, icon: Icon }) => (
 						<div
-							key={label}
-							className="flex items-center gap-2.5 border-white/15 sm:border-l sm:px-4 lg:px-6"
+							key={title}
+							className="flex items-start gap-2.5 border-white/15 sm:border-l sm:px-4 lg:px-5"
 						>
 							<Icon
 								aria-hidden="true"
 								className="hidden size-5 shrink-0 text-brand sm:block"
 							/>
+
 							<div>
-								<strong className="font-display text-2xl font-bold leading-none sm:text-3xl">
-									{value.slice(0, -1)}
-									<span className="text-brand">
-										{value.slice(-1)}
-									</span>
+								<strong className="font-display text-sm font-semibold leading-none sm:text-base">
+									{title}
 								</strong>
-								<small className="mt-1 block max-w-24 text-[8px] leading-snug text-white/60 sm:text-[9px]">
-									{label}
-								</small>
+
+								<p className="mt-1 max-w-32 text-[10px] leading-snug text-white/60 sm:text-xs">
+									{description}
+								</p>
 							</div>
 						</div>
 					))}

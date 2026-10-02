@@ -1,71 +1,33 @@
-import { ArrowDownRight, ArrowRight, ArrowUpRight, BarChart3, Building2, Check, Clapperboard, Crosshair, FileText, Landmark, Megaphone, Menu, MessageCircle, Phone, Play, RadioTower, Search, Send, Share2, Sparkles, Target, TrendingUp, Users, Video, X } from "lucide-react";
-import { MotionSection } from "@/components/motion-section";
-import { MobileNav } from "@/components/mobile-nav";
-
-const phone = process.env.NEXT_PUBLIC_PHONE || "+919552392904";
-const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP || "919552392904";
-const phoneHref = `tel:${phone.replace(/[^+\d]/g, "")}`;
-const whatsappHref = `https://wa.me/${whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent("Hello Creative Crafting, I'd like to discuss a project.")}`;
-
-const services = [
-  { number: "01", title: "AI Video Production", detail: "Build compelling video stories with thoughtful creative direction and modern production workflows.", icon: Video },
-  { number: "02", title: "Social Media Management", detail: "Plan, publish and improve consistent communication across the channels your audience uses.", icon: Share2 },
-  { number: "03", title: "Content Creation", detail: "Turn complex ideas into clear, useful and memorable visual and written content.", icon: Clapperboard },
-  { number: "04", title: "Political Consultancy", detail: "Support campaign planning, public communication and ground-level coordination with context and care.", icon: Landmark },
-  { number: "05", title: "Market Research", detail: "Understand audiences, local context and market signals to make better-informed decisions.", icon: Search },
-  { number: "06", title: "PR & Communication", detail: "Shape a consistent public voice and communicate with clarity across key moments.", icon: RadioTower },
-  { number: "07", title: "Advertising & Media Buying", detail: "Connect creative, channel planning and campaign measurement around defined objectives.", icon: Megaphone },
-  { number: "08", title: "Digital Solutions", detail: "Use practical digital experiences and technology to improve how organizations work and grow.", icon: BarChart3 },
-];
-
-const work = [
-  { id: "01", type: "Campaign communication", title: "Political campaign systems", description: "Campaign storytelling, public communication and coordinated media.", image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1000&q=85", alt: "Large public gathering at an outdoor event" },
-  { id: "02", type: "Film & production", title: "Brand film direction", description: "A clear visual narrative shaped around the people and purpose behind a brand.", image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1000&q=85", alt: "Cinema screen and film production environment" },
-  { id: "03", type: "Social media", title: "Social-first storytelling", description: "Channel-aware content designed to earn attention and build recognition.", image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=1000&q=85", alt: "Social media application icons on a screen" },
-  { id: "04", type: "Digital growth", title: "Digital experience & growth", description: "Useful digital touchpoints that make it easier to discover, understand and act.", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=85", alt: "Analytics dashboard on a laptop" },
-];
-
-const processSteps = [
-  { n: "01", title: "Understand", text: "We start with the context, audience, constraints and outcome that matter." },
-  { n: "02", title: "Research & plan", text: "We align on the message, channel mix, scope and measures of progress." },
-  { n: "03", title: "Create", text: "The team develops the content, campaign assets or digital solution." },
-  { n: "04", title: "Execute", text: "We coordinate delivery across the agreed channels and touchpoints." },
-  { n: "05", title: "Measure & improve", text: "We review what happened, share learnings and refine the next move." },
-];
-
-function BrandMark({ light = false }: { light?: boolean }) {
-  return <a href="#top" className={`brand ${light ? "brand-light" : ""}`} aria-label="Creative Crafting home"><span className="brand-symbol"><span>C</span><i /></span><span className="brand-copy"><strong>CREATIVE <b>CRAFTING</b></strong><small>MEDIA &amp; CONSULTING</small></span></a>;
-}
-
-function ContactActions({ compact = false }: { compact?: boolean }) {
-  return <div className={`contact-actions ${compact ? "contact-actions-compact" : ""}`}><a className="button button-red" href={phoneHref}><Phone size={16} aria-hidden="true"/><span>{compact ? "Call now" : `Call ${phone}`}</span><ArrowUpRight size={15} aria-hidden="true"/></a><a className="button button-outline" href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle size={17} aria-hidden="true"/><span>Chat on WhatsApp</span><ArrowUpRight size={15} aria-hidden="true"/></a></div>;
-}
+import { SiteHeader } from "@/components/layout/site-header";
+import { SiteFooter } from "@/components/layout/site-footer";
+import { FloatingWhatsApp } from "@/components/layout/floating-whatsapp";
+import { HeroSection } from "@/components/sections/hero-section";
+import { AboutSection } from "@/components/sections/about-section";
+import { AudienceSection } from "@/components/sections/audience-section";
+import { ServicesSection } from "@/components/sections/services-section";
+import { ApproachSection } from "@/components/sections/approach-section";
+import { WorkSection } from "@/components/sections/work-section";
+import { CommitmentSection } from "@/components/sections/commitment-section";
+import { ContactSection } from "@/components/sections/contact-section";
+import { FAQSection } from "@/components/sections/faq-section";
 
 export default function HomePage() {
-  return <main id="top">
-    <header className="site-header"><div className="header-inner"><BrandMark/><nav className="desktop-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#audiences">Who we work with</a><a href="#services">Services</a><a href="#approach">Our approach</a><a href="#work">Selected work</a><a href="#contact">Contact</a></nav><div className="header-cta"><a href={phoneHref}><Phone size={15}/> <span>Call now</span></a><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle size={16}/><span>WhatsApp</span></a></div><MobileNav phoneHref={phoneHref} whatsappHref={whatsappHref}/></div></header>
-
-    <section className="hero" aria-labelledby="hero-title"><div className="hero-image" role="img" aria-label="Camera and crew on a cinematic production set"/><div className="hero-shade"/><div className="hero-grain"/><div className="hero-inner"><MotionSection className="hero-copy"><div className="eyebrow eyebrow-light"><span className="eyebrow-line"/> DIGITAL GROWTH &amp; TECHNOLOGY STUDIO</div><h1 id="hero-title">Ideas into<br/><em>influence.</em></h1><p className="hero-lede">Media. Strategy. Technology.<br className="desktop-break"/> For a stronger tomorrow.</p><p className="hero-description">Creative Crafting is a media, strategy and technology studio helping political and corporate clients communicate, grow their reach and execute their vision with impact.</p><ContactActions/><a className="hero-watch" href="#work"><span className="play-icon"><Play size={15} fill="currentColor"/></span><span><strong>See our work in action</strong><small>Explore selected capabilities</small></span><ArrowUpRight size={16}/></a></MotionSection><div className="hero-feature"><div className="feature-frame"><div className="feature-image" role="img" aria-label="Audience at a live event"/><span className="frame-index">CC / 001</span><span className="frame-corner"/></div><p>Stories that move<br/><strong>people forward.</strong></p></div></div><div className="hero-bottom"><span>01 — 05 <i/></span><span>STRATEGY / STORY / SCALE</span><a href="#about" aria-label="Scroll to about section"><ArrowDownRight size={18}/></a></div></section>
-
-    <section className="proof-strip" aria-label="Company at a glance"><div className="proof-inner"><div className="proof-intro">Built for ideas<br/>that need to move.</div><div className="proof-item"><span className="proof-icon"><Target/></span><strong>10<span>+</span></strong><small>Years of industry<br/>experience</small></div><div className="proof-item"><span className="proof-icon"><LayersIcon/></span><strong>500<span>+</span></strong><small>Projects<br/>delivered</small></div><div className="proof-item"><span className="proof-icon"><Users/></span><strong>98<span>%</span></strong><small>Client success<br/>rate</small></div><div className="proof-item"><span className="proof-icon"><TrendingUp/></span><strong>50M<span>+</span></strong><small>Audience net<br/>reach</small></div></div></section>
-
-    <section className="section about-section" id="about"><div className="section-shell"><div className="section-topline"><span className="eyebrow"><span className="eyebrow-line"/> 01 / THE STUDIO</span><span className="topline-note">CREATIVE CRAFTING — INDIA</span></div><div className="about-grid"><h2>Make the message<br/>matter<span>.</span></h2><div className="about-copy"><p className="copy-large">Different goals. Same commitment to clarity.</p><p>We bring media production, strategic thinking and technology together to help organizations communicate with purpose. From a campaign that needs a clear voice to a business ready for its next stage of growth, we build around the real objective—not a one-size-fits-all formula.</p><a className="text-link" href="#services">Explore what we do <ArrowUpRight size={16}/></a></div></div></div></section>
-
-    <section className="audience-section" id="audiences"><div className="section-shell"><div className="section-topline"><span className="eyebrow"><span className="eyebrow-line"/> 02 / WHO WE WORK WITH</span><span className="topline-note">TWO AUDIENCES. ONE INTEGRATED STUDIO.</span></div><div className="audience-heading"><h2>Different arenas.<br/><span>Shared ambition.</span></h2><p>Every organization has a story to tell and a result to achieve. We shape the right mix of communication, creative and execution for the context.</p></div><div className="audience-grid"><article className="audience-card audience-political"><div className="audience-photo"/><div className="audience-overlay"/><div className="audience-card-content"><span className="audience-icon"><Landmark size={22}/></span><span className="audience-label">01 / PUBLIC LIFE</span><h3>Political<br/>clients</h3><p>Campaigns and communication built around people, place and public priorities.</p><ul><li><Check/> Political campaigns</li><li><Check/> Public communication</li><li><Check/> Voter engagement</li><li><Check/> Research &amp; strategy</li></ul><a href={whatsappHref} target="_blank" rel="noopener noreferrer" aria-label="Discuss political services on WhatsApp"><ArrowUpRight/></a></div></article><article className="audience-card audience-corporate"><div className="audience-photo"/><div className="audience-overlay"/><div className="audience-card-content"><span className="audience-icon"><Building2 size={22}/></span><span className="audience-label">02 / BUSINESS</span><h3>Corporate<br/>clients</h3><p>Strategic communication and digital experiences designed for sustainable growth.</p><ul><li><Check/> Brand building</li><li><Check/> Digital growth</li><li><Check/> Media production</li><li><Check/> Market research</li></ul><a href={whatsappHref} target="_blank" rel="noopener noreferrer" aria-label="Discuss corporate services on WhatsApp"><ArrowUpRight/></a></div></article></div></div></section>
-
-    <section className="section services-section" id="services"><div className="section-shell"><div className="section-topline"><span className="eyebrow"><span className="eyebrow-line"/> 03 / OUR SERVICES</span><span className="topline-note">IDEAS, CAPABILITY, EXECUTION</span></div><div className="services-heading"><h2>A complete range<br/>of capabilities<span>.</span></h2><p>From high-impact media production to strategic consulting and digital solutions, our integrated services help you communicate better, reach wider and act with purpose.</p></div><div className="services-grid">{services.map((service) => { const Icon = service.icon; return <a className="service-item" href={whatsappHref} target="_blank" rel="noopener noreferrer" key={service.number}><div className="service-top"><span>{service.number} / 08</span><ArrowUpRight size={17}/></div><div className="service-icon"><Icon size={28} strokeWidth={1.5}/></div><h3>{service.title}</h3><p>{service.detail}</p><span className="service-rule"/></a> })}</div></div></section>
-
-    <section className="approach-section" id="approach"><div className="approach-mark"/><div className="section-shell approach-shell"><div className="approach-intro"><span className="eyebrow eyebrow-light"><span className="eyebrow-line"/> 04 / OUR APPROACH</span><h2>From strategy<br/>to <em>real impact.</em></h2><p>A considered process keeps the work focused, coordinated and accountable from the first conversation to the final review.</p><a className="button button-white" href={whatsappHref} target="_blank" rel="noopener noreferrer">Start a conversation <ArrowUpRight size={16}/></a></div><div className="process-list">{processSteps.map((step, i) => <div className="process-step" key={step.n}><span className="process-number">{step.n}</span><div className="process-symbol">{i===0?<FileText/>:i===1?<Crosshair/>:i===2?<Clapperboard/>:i===3?<Megaphone/>:<TrendingUp/>}</div><div className="process-copy"><h3>{step.title}</h3><p>{step.text}</p></div><ArrowRight className="process-arrow" size={16}/></div>)}</div></div></section>
-
-    <section className="section work-section" id="work"><div className="section-shell"><div className="section-topline"><span className="eyebrow"><span className="eyebrow-line"/> 05 / SELECTED CAPABILITIES</span><span className="topline-note">A VIEW INTO OUR CRAFT</span></div><div className="work-heading"><h2>Stories with<br/><span>something to do.</span></h2><div><p>Our work spans campaigns, brand communication, media production and digital growth. The examples below show the kinds of challenges we help solve.</p><a className="text-link" href={whatsappHref} target="_blank" rel="noopener noreferrer">Ask about our work <ArrowUpRight size={16}/></a></div></div><div className="work-grid">{work.map((item) => <article className="work-card" key={item.id}><a href={whatsappHref} target="_blank" rel="noopener noreferrer" aria-label={`Enquire about ${item.title}`} className="work-link"><div className="work-image" style={{ backgroundImage: `url('${item.image}')` }} role="img" aria-label={item.alt}><span className="work-id">CC / {item.id}</span><span className="work-open"><ArrowUpRight size={18}/></span></div><div className="work-meta"><span>{item.type}</span><ArrowUpRight size={14}/></div><h3>{item.title}</h3><p>{item.description}</p></a></article>)}</div><p className="work-note"><span/> Illustrative capability areas. Approved client case studies and production stills can be added here.</p></div></section>
-
-    <section className="quote-section"><div className="section-shell quote-inner"><div><span className="eyebrow"><span className="eyebrow-line"/> 06 / THE COMMITMENT</span><h2>Good work starts<br/>with <span>understanding.</span></h2></div><div className="quote-copy"><span className="quote-mark">“</span><p>We listen first, align on what matters, and bring the right creative and technical capabilities to the table. The goal is work that feels clear, considered and connected to a real outcome.</p><span className="quote-attribution">THE CREATIVE CRAFTING APPROACH</span></div></div></section>
-
-    <section className="contact-section" id="contact"><div className="contact-backdrop"/><div className="section-shell contact-inner"><div className="contact-copy"><span className="eyebrow eyebrow-light"><span className="eyebrow-line"/> 07 / LET'S TALK</span><h2>Let’s build your<br/>next <em>success story.</em></h2><p>Tell us what you’re working toward. We’ll help you explore the right approach for your campaign, brand or business.</p><div className="contact-detail"><span className="contact-detail-icon"><Users size={17}/></span><span><strong>Political &amp; corporate clients</strong><small>One studio, integrated capabilities</small></span></div></div><div className="contact-panel"><span className="panel-label">START A CONVERSATION</span><p>Choose the way that works for you. We’ll take it from there.</p><a className="contact-option contact-option-red" href={phoneHref}><span className="option-icon"><Phone/></span><span><small>CALL OUR TEAM</small><strong>{phone}</strong></span><ArrowUpRight/></a><a className="contact-option" href={whatsappHref} target="_blank" rel="noopener noreferrer"><span className="option-icon"><MessageCircle/></span><span><small>MESSAGE US ON WHATSAPP</small><strong>Chat with Creative Crafting</strong></span><ArrowUpRight/></a><span className="contact-footnote"><span className="status-dot"/> Direct contact · Project enquiries welcome</span></div></div></section>
-
-    <footer className="site-footer"><div className="section-shell"><div className="footer-main"><div className="footer-brand"><BrandMark light/><p>Digital Growth &amp; Technology Studio</p><span>Media. Strategy. Technology.</span></div><div className="footer-nav"><span>EXPLORE</span><a href="#about">About</a><a href="#audiences">Who we work with</a><a href="#services">Services</a><a href="#approach">Our approach</a><a href="#work">Selected work</a></div><div className="footer-nav"><span>GET IN TOUCH</span><a href={phoneHref}>Call {phone}</a><a href={whatsappHref} target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="#contact">Project enquiries</a></div><a className="back-top" href="#top" aria-label="Back to top"><ArrowUpRight size={18}/></a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} Creative Crafting. All rights reserved.</span><span>Built around clarity, craft and impact.</span><a href="#top">Back to top ↑</a></div></div></footer>
-    <a className="floating-whatsapp" href={whatsappHref} target="_blank" rel="noopener noreferrer" aria-label="Chat with Creative Crafting on WhatsApp"><MessageCircle size={23}/><span>Chat with us</span></a>
-  </main>;
+	return (
+		<>
+			<SiteHeader />
+			<main id="top">
+				<HeroSection />
+				<AboutSection />
+				<AudienceSection />
+				<ServicesSection />
+				<ApproachSection />
+				<WorkSection />
+				<CommitmentSection />
+				<FAQSection />
+				<ContactSection />
+			</main>
+			<SiteFooter />
+			<FloatingWhatsApp />
+		</>
+	);
 }
-
-function LayersIcon() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg> }

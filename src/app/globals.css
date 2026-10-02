@@ -47,3 +47,36 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* Creative Crafting — themed scrollbar */
+:root {
+  scrollbar-color: #454545 #111113;
+  /* Firefox */
+  scrollbar-width: thin;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111113;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #414145;
+  border: 2px solid #111113;
+  border-radius: 999px;
+  transition: background 200ms ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e50914;
+}
+
+::-webkit-scrollbar-corner {
+  background: #111113;
+}

@@ -17,7 +17,7 @@ export function ContactSection() {
 			/>
 			<Container className="grid gap-9 lg:grid-cols-[1fr_.8fr] lg:items-center lg:gap-20">
 				<Reveal className="max-w-xl">
-					<Eyebrow light>07 / LET'S TALK</Eyebrow>
+					<Eyebrow light>07 / LET&apos;S TALK</Eyebrow>
 					<h2 className="mt-7 font-display text-5xl font-extrabold uppercase leading-[.88] tracking-[-.025em] sm:text-7xl">
 						Let’s build your
 						<br />
@@ -27,9 +27,9 @@ export function ContactSection() {
 						</em>
 					</h2>
 					<p className="mt-5 max-w-lg text-xs leading-[1.9] text-white/65 sm:text-sm">
-						Tell us what you’re working toward. We’ll help you
-						explore the right approach for your campaign, brand or
-						business.
+						Tell us what you&apos;re working toward. We&apos;ll help
+						you explore the right approach for your campaign, brand
+						or business.
 					</p>
 					<div className="mt-6 flex items-center gap-3">
 						<span className="grid size-10 place-items-center border border-white/20">
@@ -53,8 +53,8 @@ export function ContactSection() {
 						START A CONVERSATION
 					</span>
 					<p className="mt-2 text-xs leading-relaxed text-white/65">
-						Choose the way that works for you. We’ll take it from
-						there.
+						Choose the way that works for you. We&apos;ll take it
+						from there.
 					</p>
 					<a
 						href={phoneHref}

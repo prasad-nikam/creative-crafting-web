@@ -17,8 +17,10 @@ export function ContactSection() {
 			/>
 			<Container className="grid gap-9 lg:grid-cols-[1fr_.8fr] lg:items-center lg:gap-20">
 				<Reveal className="max-w-xl">
-					<Eyebrow light>07 / LET&apos;S TALK</Eyebrow>
-					<h2 className="mt-7 font-display text-5xl font-extrabold uppercase leading-[.88] tracking-[-.025em] sm:text-7xl">
+					<Eyebrow className="text-[12px]" light>
+						08 / LET&apos;S TALK
+					</Eyebrow>
+					<h2 className="mt-7 font-display text-5xl font-extrabold uppercase leading-[.88] tracking-tight sm:text-7xl">
 						Let’s build your
 						<br />
 						next{" "}
@@ -36,10 +38,10 @@ export function ContactSection() {
 							<Users size={17} />
 						</span>
 						<span className="flex flex-col gap-1">
-							<strong className="text-[10px]">
+							<strong className="text-xs">
 								Political &amp; corporate clients
 							</strong>
-							<small className="text-[9px] text-white/55">
+							<small className="text-[11px] text-white/55">
 								One studio, integrated capabilities
 							</small>
 						</span>
@@ -47,24 +49,24 @@ export function ContactSection() {
 				</Reveal>
 				<Reveal
 					delay={0.1}
-					className="border border-white/15 bg-white/[.04] p-5 sm:p-7"
+					className="border border-white/15 bg-white/4 p-5 sm:p-7"
 				>
-					<span className="text-[8px] font-extrabold tracking-[.15em] text-white/60">
+					<span className="text-[10px] font-extrabold tracking-[.15em] text-white/60">
 						START A CONVERSATION
 					</span>
-					<p className="mt-2 text-xs leading-relaxed text-white/65">
+					<p className="mt-2 text-sm leading-relaxed text-white/65">
 						Choose the way that works for you. We&apos;ll take it
 						from there.
 					</p>
 					<a
 						href={phoneHref}
-						className="mt-5 flex min-h-[72px] items-center gap-3 border border-brand bg-brand p-3.5 transition-colors hover:bg-brand-deep"
+						className="mt-5 flex min-h-18 items-center gap-3 border border-brand bg-brand p-3.5 transition-colors hover:bg-brand-deep"
 					>
 						<span className="grid size-9 place-items-center border border-white/50">
 							<Phone size={17} />
 						</span>
 						<span className="flex flex-1 flex-col gap-1">
-							<small className="text-[7px] font-extrabold tracking-[.13em] text-white/75">
+							<small className="text-[7px] font-extrabold tracking-[.13em] text-white/70">
 								CALL OUR TEAM
 							</small>
 							<strong className="text-xs sm:text-sm">
@@ -77,7 +79,7 @@ export function ContactSection() {
 						href={whatsappHref}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="mt-2 flex min-h-[72px] items-center gap-3 border border-white/20 p-3.5 transition-colors hover:border-white/60 hover:bg-white/5"
+						className="mt-2 flex min-h-18 items-center gap-3 border border-white/20 p-3.5 transition-colors hover:border-white/60 hover:bg-white/5"
 					>
 						<span className="grid size-9 place-items-center border border-white/40">
 							<MessageCircle size={17} />
@@ -92,7 +94,7 @@ export function ContactSection() {
 						</span>
 						<ArrowUpRight size={17} />
 					</a>
-					<span className="mt-4 flex items-center gap-2 text-[8px] text-white/50">
+					<span className="mt-4 flex items-center gap-2 text-[11px] text-white/70">
 						<i className="size-1.5 rounded-full bg-emerald-400 shadow-[0_0_0_3px_#34d39920]" />
 						Direct contact · Project enquiries welcome
 					</span>

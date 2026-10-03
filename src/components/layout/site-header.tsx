@@ -30,7 +30,7 @@ export function SiteHeader() {
 						<a
 							key={href}
 							href={href}
-							className="text-[10px] font-bold text-white/75 transition-colors hover:text-white focus-visible:text-white focus-visible:outline-brand"
+							className="text-[13px] font-medium text-white/60 transition-colors hover:text-white focus-visible:text-white focus-visible:outline-brand"
 						>
 							{label}
 						</a>
@@ -39,7 +39,7 @@ export function SiteHeader() {
 				<div className="hidden gap-2 md:flex">
 					<a
 						href={phoneHref}
-						className="inline-flex h-10 items-center gap-2 border border-brand bg-brand px-3 text-[10px] font-extrabold transition-colors hover:bg-white hover:text-ink"
+						className="inline-flex h-10 items-center gap-2 border border-brand bg-brand px-3 text-[11px] font-extrabold transition-colors hover:bg-white hover:text-ink"
 					>
 						<Phone size={15} />
 						Call now
@@ -48,7 +48,7 @@ export function SiteHeader() {
 						href={whatsappHref}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="inline-flex h-10 items-center gap-2 border border-white/35 px-3 text-[10px] font-extrabold transition-colors hover:border-white hover:bg-white hover:text-ink"
+						className="inline-flex h-10 items-center gap-2 border border-white/35 px-3 text-[11px] font-extrabold transition-colors hover:border-white hover:bg-white hover:text-ink"
 					>
 						<MessageCircle size={16} />
 						WhatsApp

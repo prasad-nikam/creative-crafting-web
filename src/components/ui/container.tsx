@@ -9,7 +9,7 @@ export function Container({
 }) {
 	return (
 		<div
-			className={`mx-auto w-[min(1240px,calc(100%_-_2.25rem))] sm:w-[min(1240px,calc(100%_-_4rem))] xl:w-[min(1240px,calc(100%_-_8rem))] ${className}`}
+			className={`mx-auto w-[min(1240px,calc(100%-2.25rem))] sm:w-[min(1240px,calc(100%-4rem))] xl:w-[min(1240px,calc(100%-8rem))] ${className}`}
 		>
 			{children}
 		</div>

@@ -13,17 +13,19 @@ export function AudienceSection() {
 		>
 			<div
 				aria-hidden="true"
-				className="pointer-events-none absolute -right-40 -top-44 size-[360px] rounded-full border border-black/5"
+				className="pointer-events-none absolute -right-40 -top-44 size-90 rounded-full border border-black/5"
 			/>
 			<Container className="relative">
 				<div className="mb-8 flex items-center justify-between gap-4 sm:mb-10">
-					<Eyebrow>02 / WHO WE WORK WITH</Eyebrow>
-					<span className="text-right text-[8px] font-bold tracking-[.16em] text-muted">
+					<Eyebrow className="text-[12px]">
+						02 / WHO WE WORK WITH
+					</Eyebrow>
+					<span className="text-right text-[10px] font-bold tracking-[.16em] text-muted">
 						TWO AUDIENCES. ONE INTEGRATED STUDIO.
 					</span>
 				</div>
 				<div className="mb-8 flex flex-col justify-between gap-4 md:mb-10 md:flex-row md:items-end">
-					<h2 className="font-display text-5xl font-extrabold uppercase leading-[.88] tracking-[-.025em] sm:text-7xl">
+					<h2 className="font-display text-5xl font-extrabold uppercase leading-[.88] tracking-tight sm:text-7xl">
 						Different arenas.
 						<br />
 						<span className="text-[#85858a]">Shared ambition.</span>
@@ -49,7 +51,7 @@ export function AudienceSection() {
 							i,
 						) => (
 							<Reveal key={number} delay={i * 0.08}>
-								<article className="group relative isolate flex min-h-[390px] flex-col justify-end overflow-hidden bg-ink text-white sm:min-h-[440px]">
+								<article className="group relative isolate flex min-h-97.5 flex-col justify-end overflow-hidden bg-ink text-white sm:min-h-110">
 									<div
 										aria-hidden="true"
 										className="absolute inset-0 -z-20 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
@@ -59,7 +61,7 @@ export function AudienceSection() {
 									/>
 									<div
 										aria-hidden="true"
-										className="absolute inset-0 -z-10 bg-gradient-to-t from-black via-black/75 to-black/10"
+										className="absolute inset-0 -z-10 bg-linear-to-t from-black via-black/75 to-black/10"
 									/>
 									<div className="p-6 sm:p-8 lg:p-10">
 										<div className="mb-5 flex items-center justify-between">

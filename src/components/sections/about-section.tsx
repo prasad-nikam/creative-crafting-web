@@ -8,14 +8,14 @@ export function AboutSection() {
 		<section id="about" className="py-16 sm:py-20 lg:py-24">
 			<Container>
 				<div className="mb-8 flex items-center justify-between gap-4 sm:mb-10">
-					<Eyebrow>01 / THE STUDIO</Eyebrow>
-					<span className="text-right text-[8px] font-bold tracking-[.16em] text-muted">
+					<Eyebrow className="text-[12px]">01 / THE STUDIO</Eyebrow>
+					<span className="text-right text-[10px] font-bold tracking-[.16em] text-muted">
 						CREATIVE CRAFTING — INDIA
 					</span>
 				</div>
 				<div className="grid items-end gap-7 lg:grid-cols-[1.15fr_.85fr] lg:gap-[9%]">
 					<Reveal>
-						<h2 className="font-display text-5xl font-extrabold uppercase leading-[.88] tracking-[-.025em] sm:text-7xl lg:text-[5.5rem]">
+						<h2 className="font-display text-5xl font-extrabold uppercase leading-[.88] tracking-tight sm:text-7xl lg:text-[5.5rem]">
 							Make the message
 							<br />
 							matter<span className="text-brand">.</span>
@@ -35,7 +35,7 @@ export function AboutSection() {
 						</p>
 						<a
 							href="#services"
-							className="mt-5 inline-flex items-center gap-2 border-b border-brand pb-1.5 text-[10px] font-extrabold transition-all hover:gap-4"
+							className="mt-5 inline-flex items-center gap-2 border-b border-brand pb-1.5 text-[12px] font-extrabold transition-all hover:gap-4"
 						>
 							Explore what we do <ArrowUpRight size={16} />
 						</a>

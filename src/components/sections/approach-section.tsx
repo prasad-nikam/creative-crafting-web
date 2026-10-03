@@ -22,12 +22,14 @@ export function ApproachSection() {
 		>
 			<div
 				aria-hidden="true"
-				className="absolute -right-24 top-0 -z-10 size-[460px] rounded-full border border-white/5"
+				className="absolute -right-24 top-0 -z-10 size-115 rounded-full border border-white/5"
 			/>
 			<Container className="grid gap-10 lg:grid-cols-[.85fr_1.15fr] lg:gap-20">
 				<Reveal className="max-w-lg">
-					<Eyebrow light>04 / OUR APPROACH</Eyebrow>
-					<h2 className="mt-7 font-display text-5xl font-extrabold uppercase leading-[.88] tracking-[-.025em] sm:text-7xl">
+					<Eyebrow className="text-[12px]" light>
+						04 / OUR APPROACH
+					</Eyebrow>
+					<h2 className="mt-7 font-display text-5xl font-extrabold uppercase leading-[.88] tracking-tight sm:text-7xl">
 						From strategy
 						<br />
 						to{" "}
@@ -42,7 +44,7 @@ export function ApproachSection() {
 						href={whatsappHref}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="mt-6 inline-flex min-h-11 items-center gap-3 bg-white px-4 text-[10px] font-extrabold text-ink transition-colors hover:bg-brand hover:text-white"
+						className="mt-6 inline-flex min-h-11 items-center gap-3 bg-white px-4 text-[12px] font-extrabold text-ink transition-colors hover:bg-brand hover:text-white"
 					>
 						Start a conversation <ArrowRight size={16} />
 					</a>
@@ -52,7 +54,7 @@ export function ApproachSection() {
 						const Icon = symbols[i];
 						return (
 							<Reveal key={number} delay={i * 0.04}>
-								<div className="grid min-h-[86px] grid-cols-[28px_38px_1fr_16px] items-center gap-3 py-4 sm:grid-cols-[36px_48px_1fr_20px] sm:gap-4">
+								<div className="grid min-h-21.5 grid-cols-[28px_38px_1fr_16px] items-center gap-3 py-4 sm:grid-cols-[36px_48px_1fr_20px] sm:gap-4">
 									<span className="text-[9px] font-bold tracking-wider text-brand">
 										{number}
 									</span>
@@ -63,7 +65,7 @@ export function ApproachSection() {
 										<h3 className="font-display text-xl font-bold uppercase leading-none sm:text-2xl">
 											{title}
 										</h3>
-										<p className="mt-1.5 max-w-md text-[9px] leading-[1.65] text-white/55 sm:text-[11px]">
+										<p className="mt-1.5 max-w-md text-[10px] leading-[1.65] text-white/55 sm:text-[13px]">
 											{description}
 										</p>
 									</div>

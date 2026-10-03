@@ -10,13 +10,13 @@ export function ServicesSection() {
 		<section id="services" className="py-16 sm:py-20 lg:py-24">
 			<Container>
 				<div className="mb-8 flex items-center justify-between gap-4 sm:mb-10">
-					<Eyebrow>03 / OUR SERVICES</Eyebrow>
-					<span className="text-right text-[8px] font-bold tracking-[.16em] text-muted">
+					<Eyebrow className="text-[12px]">03 / OUR SERVICES</Eyebrow>
+					<span className="text-right text-[10px] font-bold tracking-[.16em] text-muted">
 						IDEAS, CAPABILITY, EXECUTION
 					</span>
 				</div>
 				<div className="mb-8 grid gap-4 md:mb-10 md:grid-cols-[1.1fr_.9fr] md:items-end md:gap-10">
-					<h2 className="font-display text-5xl font-extrabold uppercase leading-[.88] tracking-[-.025em] sm:text-7xl">
+					<h2 className="font-display text-5xl font-extrabold uppercase leading-[.88] tracking-tight sm:text-7xl">
 						A complete range
 						<br />
 						of capabilities<span className="text-brand">.</span>
@@ -40,7 +40,7 @@ export function ServicesSection() {
 									href={whatsappHref}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="group relative flex h-full min-h-[220px] flex-col border-b border-r border-line p-5 transition-colors duration-300 hover:bg-night hover:text-white focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-brand sm:min-h-[245px] sm:p-6"
+									className="group relative flex h-full min-h-55 flex-col border-b border-r border-line p-5 transition-colors duration-300 hover:bg-night hover:text-white focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-brand sm:min-h-61.25 sm:p-6"
 								>
 									<div className="flex items-center justify-between text-[8px] font-extrabold tracking-[.12em] text-muted group-hover:text-white/55">
 										<span>{number} / 08</span>

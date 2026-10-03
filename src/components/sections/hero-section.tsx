@@ -46,11 +46,11 @@ export function HeroSection() {
 	return (
 		<section
 			aria-labelledby="hero-title"
-			className="relative isolate flex min-h-[calc(100svh_-_4rem)] flex-col overflow-hidden bg-night text-white md:min-h-[calc(100svh_-_5rem)]"
+			className="relative isolate flex min-h-[calc(100svh-4rem)] flex-col overflow-hidden bg-night text-white md:min-h-[calc(100svh-5rem)]"
 		>
 			<div
 				aria-hidden="true"
-				className="absolute inset-0 -z-30 bg-[url('https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=2200&q=90')] bg-cover bg-[center_43%] opacity-55"
+				className="absolute inset-0 -z-30 bg-[url('https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=2200&q=90')] bg-cover bg-position-[center_43%] opacity-55"
 			/>
 			<div
 				aria-hidden="true"
@@ -60,13 +60,13 @@ export function HeroSection() {
 				<Reveal className="relative z-10 max-w-2xl">
 					<Eyebrow light>
 						{" "}
-						DIGITAL GROWTH &amp; TECHNOLOGY STUDIO
+						DIGITAL GROWTH, STRATEGY &amp; TECHNOLOGY STUDIO
 					</Eyebrow>
 					<h1
 						id="hero-title"
 						className="mt-7 font-display text-[clamp(4.5rem,10vw,8.6rem)] font-extrabold uppercase leading-[.78] tracking-[-.035em]"
 					>
-						Ideas into
+						ideas into
 						<br />
 						<span className="text-brand">influence.</span>
 					</h1>
@@ -75,7 +75,7 @@ export function HeroSection() {
 						<br className="hidden sm:block" /> For a stronger
 						tomorrow.
 					</p>
-					<p className="mt-4 max-w-lg text-xs leading-[1.85] text-white/75 sm:text-sm">
+					<p className="mt-4 max-w-lg text-sm leading-[1.85] text-white/75 sm:text-sm">
 						Creative Crafting is a media, strategy and technology
 						studio helping political and corporate clients
 						communicate, grow their reach and execute their vision
@@ -107,7 +107,7 @@ export function HeroSection() {
 				</Reveal>
 				<Reveal
 					delay={0.12}
-					className="relative mx-auto w-full max-w-[420px] lg:mr-2 lg:ml-auto"
+					className="relative mx-auto w-full max-w-105 lg:mr-2 lg:ml-auto"
 				>
 					<div className="relative rotate-[1.5deg] border border-white/40 bg-black/40 p-2 shadow-2xl shadow-black/50 transition-transform duration-500 hover:rotate-0">
 						<div
@@ -168,7 +168,7 @@ export function HeroSection() {
 			<a
 				href="#about"
 				aria-label="Scroll to about section"
-				className="absolute bottom-[6.5rem] right-[4vw] hidden size-8 place-items-center rounded-full border border-white/35 text-white/75 transition-colors hover:border-brand hover:bg-brand lg:grid"
+				className="absolute bottom-26 right-[4vw] hidden size-8 place-items-center rounded-full border border-white/35 text-white/75 transition-colors hover:border-brand hover:bg-brand lg:grid"
 			>
 				<ArrowDownRight size={17} />
 			</a>

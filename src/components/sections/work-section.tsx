@@ -11,13 +11,15 @@ export function WorkSection() {
 		<section id="work" className="py-16 sm:py-20 lg:py-24">
 			<Container>
 				<div className="mb-8 flex items-center justify-between gap-4 sm:mb-10">
-					<Eyebrow>05 / SELECTED CAPABILITIES</Eyebrow>
-					<span className="text-right text-[8px] font-bold tracking-[.16em] text-muted">
+					<Eyebrow className="text-[12px]">
+						05 / SELECTED CAPABILITIES
+					</Eyebrow>
+					<span className="text-right text-[10px] font-bold tracking-[.16em] text-muted">
 						A VIEW INTO OUR CRAFT
 					</span>
 				</div>
 				<div className="mb-8 grid gap-4 md:mb-10 md:grid-cols-[1.1fr_.9fr] md:items-end md:gap-10">
-					<h2 className="font-display text-5xl font-extrabold uppercase leading-[.88] tracking-[-.025em] sm:text-7xl">
+					<h2 className="font-display text-5xl font-extrabold uppercase leading-[.88] tracking-tight sm:text-7xl">
 						Stories with
 						<br />
 						<span className="text-[#85858a]">something to do.</span>
@@ -32,7 +34,7 @@ export function WorkSection() {
 							href={whatsappHref}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="mt-4 inline-flex items-center gap-2 border-b border-brand pb-1.5 text-[10px] font-extrabold transition-all hover:gap-4"
+							className="mt-4 inline-flex items-center gap-2 border-b border-brand pb-1.5 text-[12px] font-extrabold transition-all hover:gap-4"
 						>
 							Ask about our work <ArrowUpRight size={16} />
 						</a>
@@ -80,7 +82,7 @@ export function WorkSection() {
 						</Reveal>
 					))}
 				</div>
-				<p className="mt-7 border-l-2 border-brand pl-3 text-[9px] leading-relaxed text-muted">
+				<p className="mt-7 border-l-2 border-brand pl-3 text-[11px] leading-relaxed text-muted">
 					Illustrative capability areas. Approved client case studies
 					and production stills can be added here.
 				</p>

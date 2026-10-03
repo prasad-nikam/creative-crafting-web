@@ -1,15 +1,23 @@
 import Link from "next/link";
 
-export function BrandMark({ light = false }: { light?: boolean }) {
+export function BrandMark({
+	light = false,
+	className,
+}: {
+	light?: boolean;
+	className?: string;
+}) {
 	return (
 		<Link
 			href="#top"
 			aria-label="Creative Crafting home"
-			className="group inline-flex shrink-0 items-center gap-2.5"
+			className={
+				"group inline-flex shrink-0 items-center gap-2.5 " + className
+			}
 		>
 			<svg
 				aria-hidden="true"
-				viewBox="-2 -12 120 120"
+				viewBox="-2 -10 120 120"
 				className="size-12 shrink-0"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
@@ -134,13 +142,13 @@ export function BrandMark({ light = false }: { light?: boolean }) {
 
 			<span className="flex flex-col gap-px">
 				<strong
-					className={`text-[13px] font-extrabold leading-[1.15] tracking-[-.04em] ${
+					className={`text-[14px] font-extrabold leading-[1.15] tracking-[-.04em] ${
 						light ? "text-white" : "text-white"
 					}`}
 				>
 					CREATIVE CRAFTING
 				</strong>
-				<small className="text-[7px] font-semibold tracking-[.16em] text-white/65">
+				<small className="text-[9px] font-semibold tracking-[.16em] text-white/65">
 					MEDIA &amp; CONSULTING
 				</small>
 			</span>

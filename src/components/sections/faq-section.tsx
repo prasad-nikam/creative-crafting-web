@@ -28,8 +28,10 @@ export function FAQSection() {
 			<Container>
 				<div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-16">
 					<Reveal>
-						<Eyebrow>07 / COMMON QUESTIONS</Eyebrow>
-						<h2 className="mt-6 font-display text-5xl font-extrabold uppercase leading-[.9] tracking-[-.025em] sm:text-6xl">
+						<Eyebrow className="text-[12px]">
+							07 / COMMON QUESTIONS
+						</Eyebrow>
+						<h2 className="mt-6 font-display text-5xl font-extrabold uppercase leading-[.9] tracking-tight sm:text-6xl">
 							A little more
 							<br /> <span className="text-brand">clarity.</span>
 						</h2>
